@@ -1,12 +1,10 @@
-#include <Arduino.h>
 #include "boilerplate.h"
-#include <vector>
 
 std::vector<ISetup*> setupables;
 
 void setup() {
     Serial.begin(115200);
-    delay(1000);
+    delay(5);
 
     // Create and collect ISetup instances
     setupables.push_back(new DummySetup("GPIO"));
